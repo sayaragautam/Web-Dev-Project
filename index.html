@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Netflix Clone</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="header">
+    <div class="nav-left">
+        <span class="logo">NETFLIX</span>
+        <a href="#">Home</a>
+        <a href="#">TV Shows</a>
+        <a href="#">Movies</a>
+        <a href="#">Games</a>
+        <a href="#">Latest</a>
+        <a href="#">My List</a>
+        <a href="#">Browse by Languages</a>
+    </div>
+
+    <div class="nav-right">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-bell"></i>
+
+        <!-- USER PROFILE ICON -->
+        <div class="user-profile">
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <video id="heroVideo" muted playsinline>
+        <source src="hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>Barbie</h1>
+        <p>Power, ambition and revenge.</p>
+
+        <button class="play-btn" onclick="toggleVideo()">▶ Play</button>
+        <button class="info-btn" onclick="openModal()">ℹ More Info</button>
+    </div>
+</section>
+
+<!-- ================= TRENDING ================= -->
+<section class="slider">
+    <h2>Trending Now</h2>
+    <div class="row infinite">
+        <img src="movie1.jpg">
+        <img src="movie2.jpg">
+        <img src="movie3.jpg">
+        <img src="movie4.jpg">
+
+        <!-- duplicated for infinite -->
+        <img src="movie5.jpg">
+        <img src="movie6.jpg">
+        <img src="movie7.jpg">
+        <img src="movie8.jpg">
+    </div>
+</section>
+
+<!-- ================= POPULAR ================= -->
+<section class="slider">
+    <h2>Popular on Netflix</h2>
+    <div class="row infinite">
+        <img src="movie9.jpg">
+        <img src="movie10.jpg">
+        <img src="movie11.jpg">
+        <img src="movie12.jpg">
+
+        <!-- duplicated for infinite -->
+        <img src="movie13.jpg">
+        <img src="movie14.jpg">
+        <img src="movie15.jpg">
+        <img src="movie1.jpg">
+    </div>
+</section>
+
+<!-- ================= MORE INFO MODAL ================= -->
+<div id="infoModal" class="info-modal">
+    <span class="close-btn" onclick="closeModal()">✕</span>
+
+    <div class="info-box">
+        <div class="info-banner">
+            <img src="movie1.jpg">
+            <div class="info-banner-text">
+                <h1>Barbie Movie</h1>
+                <button onclick="toggleVideo()">▶ Play</button>
+            </div>
+        </div>
+
+        <div class="info-body">
+            <p class="meta">2025 • 18+ • Limited Series</p>
+            <p>
+                A former gangster returns to the underworld after a shocking incident.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

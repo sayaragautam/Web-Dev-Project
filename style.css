@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px; /* FIXED */
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.nav-left {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.logo {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-left a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* FIXED */
+}
+
+.nav-right i {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* USER PROFILE */
+.user-profile {
+    width: 32px;
+    height: 32px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 90vh;
+    margin-top: 60px;
+}
+
+.hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, black, transparent);
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 120px;
+    left: 50px;
+}
+
+.play-btn, .info-btn {
+    padding: 10px 22px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* ================= SLIDERS ================= */
+.slider {
+    padding: 20px 40px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.row::-webkit-scrollbar {
+    display: none;
+}
+
+.row img {
+    width: 180px;
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.row img:hover {
+    transform: scale(1.1);
+}
+
+/* ================= MODAL ================= */
+.info-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.close-btn {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.info-box {
+    background: #111;
+    width: 70%;
+    margin: 80px auto;
+}
+
+.info-banner img {
+    width: 100%;
+}
+
+.info-banner-text {
+    padding: 20px;
+}
+
+.info-body {
+    padding: 20px;
+}
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .nav-left a {
+        display: none;   /* Hide menu links */
+    }
+
+    .hero-content {
+        left: 20px;
+        bottom: 80px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .row img {
+        width: 120px;    /* Smaller posters */
+    }
+
+    .info-box {
+        width: 90%;     /* Modal fits phone */
+    }
+}
+
